@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- flag css cdn start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+    <!-- flag css cdn end -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>IP Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg py-3 shadow shadow-bottom">
+      <div class="container">
+        <a class="navbar-brand text-rocker" href="#">SIRTRACKER<i class="bx bx-dollar"></i></a>
+        <button
+          class="navbar-toggler border-0 focus-ring focus-ring-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <div class="humberger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-4 gap-lg-0 mt-4 mt-lg-0">
+            <li class="nav-item mx-3">
+              <a class="nav-link active text-primary fw-bold" aria-current="page" href="#">Search IP</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">
+                <div class="border-bottom-hover d-none d-lg-block"></div>
+                Proxy</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#"
+                ><div class="border-bottom-hover d-none d-lg-block"></div>
+                VPS</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#"
+                ><div class="border-bottom-hover d-none d-lg-block"></div>
+                Hosting</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#"
+                ><div class="border-bottom-hover d-none d-lg-block"></div>
+                About</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#"
+                ><div class="border-bottom-hover d-none d-lg-block"></div>
+                Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- section start -->
+    <section class="bg-dark py-sm-5 d-flex align-items-center">
+      <div id="cards" class="container bg-light p-3 py-4 p-md-5 rounded shadow-lg">
+        <div class="containe-fluid md-0 p-0">
+          <div class="row">
+            <div class="col-lg-6 mb-3 mb-lg-0">
+              <div class="d-flex flex-column w-100">
+                <h1 class="mb-5">IP address lookup</h1>
+                <div id="label" class="text-secondary mb-2">Enter the IP address you want to know :</div>
+                <div class="d-flex">
+                  <input id="ip-address" type="text" placeholder="127.0.0.1" class="form-control w-75 me-3 fs-5" />
+                  <button id="submitIP" class="btn btn-danger w-50">Get IP details</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 p-0 m-0">
+              <div class="container-fluid">
+                <div class="card border-0 bg-secondary bg-opacity-25 p-md-4 py-4 fs-6 w-100">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-12">
+                        <div id="imageMap" class="col-12 border rounded mb-5"></div>
+                      </div>
+                      <div class="col-2 d-none d-lg-block"><i id="logo-location" class="bx bx-current-location text-primary"></i></div>
+                      <div class="col-12 col-lg-10">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-12"><h1 class="fs-2 mb-4">Location</h1></div>
+                            <div class="col-6 text-primary"><p>IP Address :</p></div>
+                            <div class="col-6"><p id="IP_ADDRESS"></p></div>
+                            <div class="col-6"><p>Country :</p></div>
+                            <div class="col-6 d-flex">
+                              <p id="CONTRY"></p>
+                              <span id="flag" class="flag-icon flag-icon-squared ms-3 mb-2"></span>
+                            </div>
+                            <div class="col-6"><p>Region :</p></div>
+                            <div class="col-6"><p id="REGION"></p></div>
+                            <div class="col-6"><p>City :</p></div>
+                            <div class="col-6"><p id="CITY"></p></div>
+                            <div class="col-6"><p>ZIP :</p></div>
+                            <div class="col-6"><p id="ZIP"></p></div>
+                            <div class="col-6"><p>ISP :</p></div>
+                            <div class="col-6"><p id="ISP"></p></div>
+                            <div class="col-6"><p>Organization:</p></div>
+                            <div class="col-6"><p id="ORG"></p></div>
+                            <div class="col-6"><p>AS Organization :</p></div>
+                            <div class="col-6"><p id="AS"></p></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section end -->
+
+    <!-- section 2 start -->
+    <!-- <section class="py-5">
+        <div class="container">
+            <h1 class="fw-light text-center mb-5">Hacking News</h1>
+            <div class="row">
+                <div class="col-md 3">
+                    <div class="card">
+                        <div class="card-header">
+                            
+                        </div>
+                        <div class="card-content">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md 3">b</div>
+                <div class="col-md 3">c</div>
+                <div class="col-md 3">d</div>
+            </div>
+        </div>
+    </section> -->
+    <!-- section 2 end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>

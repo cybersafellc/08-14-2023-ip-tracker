@@ -1,0 +1,96 @@
+.text-rocker {
+  font-family: "New Rocker", cursive;
+}
+nav a {
+  transition: 0.3s;
+}
+
+a {
+  position: relative;
+  overflow: hidden;
+}
+@keyframes nava {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes navaend {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+.border-bottom-hover {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  border-bottom: 2px solid #0d6efd !important;
+  bottom: 5px;
+  animation: navaend 0.3s;
+}
+
+nav a:hover {
+  color: #0d6efd !important;
+}
+nav a > .border-bottom-hover {
+  transform: translateX(120%);
+}
+nav a:hover > .border-bottom-hover {
+  animation: nava 0.3s;
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.humberger-menu {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.humberger-menu span {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+}
+
+.humberger-menu span:nth-child(2) {
+  width: 80%;
+}
+#ip-address {
+  border: 1px solid rgba(0, 0, 0, 0.299);
+}
+#label {
+  font-size: 13px !important;
+}
+
+#logo-location {
+  font-size: 50px;
+}
+
+section {
+  min-height: 100vh;
+  background-image: url(https://img.freepik.com/free-vector/dark-topographic-map_1217-1734.jpg?w=740&t=st=1692006056~exp=1692006656~hmac=f6a37914845e0fcecd38bc520107f99ffda0d521b8c0c093cad0b2699446da9d);
+}
+
+#imageMap {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+}
+
+@media screen and (max-width: 600px) {
+  #cards {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px !important;
+  }
+}
